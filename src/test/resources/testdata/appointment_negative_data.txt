@@ -1,0 +1,6 @@
+Appointment{firstname='', lastname='', ssn='12-31*-023-2311', email='Ferhat@asdcom', phoneNumber='211412', date='null'}
+Appointment{firstname='', lastname='', ssn='123445', email='alican.com', phoneNumber='211-333-41234', date='null'}
+Appointment{firstname='', lastname='', ssn='5-55-55-555', email='laz@ziyacom', phoneNumber='7181-123-44', date='null'}
+Appointment{firstname='', lastname='', ssn='12-31*-023-2311', email='Ferhat@asdcom', phoneNumber='211412', date='null'}
+Appointment{firstname='', lastname='', ssn='123445', email='alican.com', phoneNumber='211-333-41234', date='null'}
+Appointment{firstname='', lastname='', ssn='5-55-55-555', email='laz@ziyacom', phoneNumber='7181-123-44', date='null'}
