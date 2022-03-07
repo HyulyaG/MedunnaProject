@@ -8,10 +8,6 @@
     <artifactId>mycucumberproject</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -60,42 +56,14 @@
             <version>7.2.3</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-compress</artifactId>
-            <version>1.20</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>4.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>4.0.1</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>itextpdf</artifactId>
-            <version>5.4.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.9.8</version>
-        </dependency>
 
 
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>tech.grasshopper</groupId>-->
-<!--            <artifactId>extentreports-cucumber7-adapter</artifactId>-->
-<!--            <version>1.2.0</version>-->
-<!--        </dependency>-->
-
+        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter &ndash;&gt;-->
+        <!--        <dependency>-->
+        <!--            <groupId>tech.grasshopper</groupId>-->
+        <!--            <artifactId>extentreports-cucumber7-adapter</artifactId>-->
+        <!--            <version>1.2.0</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -103,8 +71,27 @@
             <version>42.2.8</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.8</version>
+        </dependency>
 
     </dependencies>
+
+
 
     <build>
         <plugins>
@@ -169,5 +156,10 @@
         </plugins>
     </build>
 
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
 
 </project>
