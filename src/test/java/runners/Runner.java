@@ -11,9 +11,9 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml",
                 "rerun:target/failedRerun.txt"
         },
-        features = "./src/test/resources/features",
+        features = "./src/test/resources/features/",
         glue = {"stepdefinitions","Hooks"},
-        tags = "@excel_login",
+        tags = "@user_settings_negative_editable",
         dryRun = false
 )
 public class Runner {
