@@ -13,9 +13,11 @@ import org.junit.runner.RunWith;
         },
         features = "./src/test/resources/features",
         glue = {"stepdefinitions","Hooks"},
-        tags = "@excel_login",
+        tags = "@ApiAppointmentPost",
         dryRun = false
+
+
 )
 public class Runner {
-        //runner
+
 }
