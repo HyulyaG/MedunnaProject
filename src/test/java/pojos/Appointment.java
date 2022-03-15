@@ -12,6 +12,7 @@ public class Appointment {
 
     //variables, constructors, getters and setters, toString
 
+
     public Appointment() {
     }
 

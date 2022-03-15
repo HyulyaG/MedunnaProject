@@ -1,14 +1,10 @@
 package utilities;
-
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 public class DatabaseUtility {
-
     private static Connection connection;
     private static Statement statement;
     private static ResultSet resultSet;
@@ -23,23 +19,12 @@ public class DatabaseUtility {
             e.printStackTrace();
         }
     }
-
-
     public static void main(String[] args) {
         createConnection("jdbc:postgresql://medunna.com:5432/medunna_db","medunnadb_user" , "Medunnadb_@129");
-
-
         System.out.println(getColumnData("Select * FROM jhi_user", "first_name"));
-
         closeConnection();
-
-
-
     }
-
-
     public static void createConnection(String url, String user, String password) {
-
         try {
             connection = DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
@@ -70,7 +55,6 @@ public class DatabaseUtility {
      *         The rest of the data will be ignored
      */
     public static Object getCellValue(String query) {
-
         return getQueryResultList(query).get(0).get(0);
     }
     /**
@@ -81,7 +65,6 @@ public class DatabaseUtility {
      *         be returned. The rest of the data will be ignored
      */
     public static List<Object> getRowList(String query) {
-
         return getQueryResultList(query).get(0);
     }
     /**
@@ -206,14 +189,8 @@ public class DatabaseUtility {
         int rowCount = resultSet.getRow();
         return rowCount;
     }
-
     public static void insertCountry(String  countryName){
-
-
-
-
     }
-
     public static void executeInsertion(String query) {
         try {
             statement = connection.createStatement();
@@ -228,12 +205,9 @@ public class DatabaseUtility {
             e.printStackTrace();
         }
     }
-
-
     public static int getMaxCountryId (String query,String column){
         int max = 0;
         List<Object> allIds = getColumnData(query, column);
-
         for (int i=0; i<allIds.size();i++){
             int num = Integer.parseInt(allIds.get(i).toString().trim());
             if(max <= num)
@@ -241,16 +215,10 @@ public class DatabaseUtility {
         }
         return max;
     }
-
     public static Object getCellValuewithRowsAndCells(String query,int row,int cell) {
-
         return getQueryResultList(query).get(row).get(cell);
     }
-
     public static List<Object> getRowListWithParam(String query,int row) {
-
         return getQueryResultList(query).get(row);
     }
-
-
 }

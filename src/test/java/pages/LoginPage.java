@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
+
 public class LoginPage {
 
     public LoginPage(){
@@ -29,7 +30,6 @@ public class LoginPage {
     @FindBy(xpath = "(//*[text()='Register'])[1]")
     public WebElement registerButton;
 
-
     public void loginApplication(String userName, String pass){
         loginDropdown.click();
         signInButton.click();
@@ -42,3 +42,4 @@ public class LoginPage {
         registerButton.click();
     }
 }
+

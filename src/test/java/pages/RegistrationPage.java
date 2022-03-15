@@ -8,15 +8,16 @@ import utilities.Driver;
 
 public class RegistrationPage {
 
-    public RegistrationPage(){
+    public RegistrationPage() {
 
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
+
     @FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
     public WebElement loginDropdown;
     @FindBy(linkText = "Register")
     public WebElement registerButton;
-    @FindBy(id="ssn")
+    @FindBy(id = "ssn")
     public WebElement ssnTextBox;
     @FindBy(id = "firstName")
     public WebElement firstNameTextBox;
@@ -26,15 +27,15 @@ public class RegistrationPage {
     public WebElement userNameTextBox;
     @FindBy(id = "email")
     public WebElement emailTextBox;
-    @FindBy(id ="firstPassword" )
+    @FindBy(id = "firstPassword")
     public WebElement firstPasswordTextBox;
-    @FindBy(id="secondPassword")
+    @FindBy(id = "secondPassword")
     public WebElement secondPasswordTextBox;
-    @FindBy(id="register-submit")
+    @FindBy(id = "register-submit")
     public WebElement registerSubmitButton;
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
     public WebElement errorSsnMessage;
-    @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
     public WebElement errorFirstNameMessage;
     @FindBy(xpath = "//div[@class='invalid-feedback'])[2]")
     public WebElement errorLastNameMessage;
@@ -52,5 +53,10 @@ public class RegistrationPage {
 
     @FindBy(xpath = "//*[@id='strengthBar']/li[contains(@style,'rgb(0, 255, 0)')]")
     public WebElement passwordStrength4;
-
+    @FindBy(xpath = "//*[text()='Your email is required.']")
+    public WebElement yourEmailIsRequiredMessage;
+    @FindBy(xpath = "//*[text()='Your username is required.']")
+    public  WebElement usernameIsRequiredMessage;
+    @FindBy(xpath = "//*[.='This field is invalid']")
+    public WebElement thisFieldIsInvalidMessage;
 }
