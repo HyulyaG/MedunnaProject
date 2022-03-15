@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 public class AppointmentPage {
+
     public AppointmentPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
@@ -36,4 +37,21 @@ public class AppointmentPage {
     public WebElement alertMessageEmailInvalid;
     @FindBy(xpath = "//*[contains(text(),'Phone number is invalid')]")
     public WebElement alertMessagePhoneNumberInvalid;
+    @FindBy (xpath = "//*[@aria-haspopup='true']")
+    public WebElement loginDropdown;
+    @FindBy (xpath = "//*[text()='Sign in']")
+    public WebElement signInButton;
+    @FindBy (name = "username")
+    public WebElement userNameTextBox;
+    @FindBy (name = "password")
+    public WebElement passwordTextBox;
+    @FindBy (xpath = "//*[@type='submit']")
+    public WebElement signinbutton;
+    @FindBy (xpath = "//*[text()='MY PAGES(PATIENT)']")
+    public WebElement myPagesDropdown;
+    @FindBy (xpath = "(//*[@role='menuitem'])[1]")
+    public WebElement myAppointmentsButton;
+    @FindBy (css = "#appointment-heading")
+    public WebElement appointmentHeading;
+
 }

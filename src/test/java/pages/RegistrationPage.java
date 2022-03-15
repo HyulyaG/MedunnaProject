@@ -35,7 +35,7 @@ public class RegistrationPage {
     public WebElement registerSubmitButton;
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
     public WebElement errorSsnMessage;
-    @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
     public WebElement errorFirstNameMessage;
     @FindBy(xpath = "//div[@class='invalid-feedback'])[2]")
     public WebElement errorLastNameMessage;
@@ -53,4 +53,10 @@ public class RegistrationPage {
 
     @FindBy(xpath = "//*[@id='strengthBar']/li[contains(@style,'rgb(0, 255, 0)')]")
     public WebElement passwordStrength4;
+    @FindBy(xpath = "//*[text()='Your email is required.']")
+    public WebElement yourEmailIsRequiredMessage;
+    @FindBy(xpath = "//*[text()='Your username is required.']")
+    public  WebElement usernameIsRequiredMessage;
+    @FindBy(xpath = "//*[.='This field is invalid']")
+    public WebElement thisFieldIsInvalidMessage;
 }
