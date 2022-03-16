@@ -1,18 +1,17 @@
 package utilities;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
+
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 public class DBUtils {
     private static Connection connection;
     private static Statement statement;
     private static ResultSet resultSet;
+
+
     /**
      * DBUtils.createConnection(); -> to connect to teh database
      */
@@ -61,6 +60,8 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
+
+
     public static Connection getConnection() {
         String url = "jdbc:sqlserver://184.168.194.58:1433;databaseName=crystalkeyhotels2;user=Ahmet_User;password=Ahmet123!";
         String username="Ahmet_User";
@@ -73,6 +74,7 @@ public class DBUtils {
         }
         return connection;
     }
+
     //used to get statement
     public static Statement getStatement() {
         try {
@@ -83,6 +85,8 @@ public class DBUtils {
         }
         return statement;
     }
+
+
     //Use this to get the ResutSet object
     public static ResultSet getResultset() {
         try {
@@ -93,6 +97,7 @@ public class DBUtils {
         }
         return resultSet;
     }
+
     // This method returns the number fo row in a table in the database
     public static int getRowCount() throws Exception {
         resultSet.last();
@@ -207,3 +212,4 @@ public class DBUtils {
         return columns;
     }
 }
+
