@@ -5,9 +5,6 @@ Appointment{firstname='Suzi', lastname='Beier', ssn='123-123-2311', email='jerro
 Appointment{firstname='Bessie', lastname='Kutch', ssn='523-891-8294', email='doyle.treutel@gmail.com', phoneNumber='null', date='21-06-2034'}
 Appointment{firstname='Mitch', lastname='Moore', ssn='523-89-8294', email='buster.brown@yahoo.com', phoneNumber='null', date='21-06-2034'}
 Appointment{firstname='Joesph', lastname='Labadie', ssn='158-12-2311', email='duncan.crooks@yahoo.com', phoneNumber='null', date='01-04-2049'}
-Appointment{firstname='null', lastname='null', ssn='null', email='null', phoneNumber='null', date='null'}
-Appointment{firstname='null', lastname='null', ssn='null', email='null', phoneNumber='null', date='null'}
-Appointment{firstname='null', lastname='null', ssn='null', email='null', phoneNumber='null', date='null'}
 Appointment{firstname='Earl', lastname='Lynch', ssn='523-89-8344', email='ivey.dickinson@gmail.com', phoneNumber='null', date='21-06-2034'}
 Appointment{firstname='Hasan', lastname='Kara', ssn='523-89-8344', email='hasan@kara.com', phoneNumber='null', date='21-06-2034'}
 Appointment{firstname='Hasan', lastname='Kara', ssn='523-89-8344', email='hasan@kara.com', phoneNumber='null', date='21-06-2034'}

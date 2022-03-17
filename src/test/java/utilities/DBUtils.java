@@ -21,16 +21,26 @@ public class DBUtils {
      * DBUtils.createConnection(); -> to connect to teh database
      */
     public static void createConnection() {
-        String url = "jdbc:postgresql://157.230.48.97:5432/gmibank_db";
-        String username="techprodb_user";
-        String password="Techpro_@126";
+        String url = ConfigurationReader.getProperty("db_credentials_url");
+        String user = ConfigurationReader.getProperty("db_username");
+        String password = "Techpro_@126";
         try {
-            connection = DriverManager.getConnection(url, username, password);
+            connection = DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
+
+    public static void createConnection(String url, String user, String password) {
+        try {
+            connection = DriverManager.getConnection(url, user, password);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
     /**
      * DBUtils.executeQuery(String query); -> Execute the query and store is the result set object
      */

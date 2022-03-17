@@ -7,30 +7,30 @@ import utilities.Driver;
 
 public class AppointmentPage {
 
-    public AppointmentPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public AppointmentPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
 
     }
 
     @FindBy(xpath = "(//*[.='Make an Appointment'])[2]")
     public WebElement appointmentButton;
 
-    @FindBy (id = "firstName")
+    @FindBy(id = "firstName")
     public WebElement firstNameBox;
 
-    @FindBy (id = "ssn")
+    @FindBy(id = "ssn")
     public WebElement ssnBox;
 
-    @FindBy (id = "lastName")
+    @FindBy(id = "lastName")
     public WebElement lastNameTextBox;
 
-    @FindBy (id = "email")
+    @FindBy(id = "email")
     public WebElement emailTextBox;
 
-    @FindBy (id = "phone")
+    @FindBy(id = "phone")
     public WebElement phoneTextBox;
 
-    @FindBy (name = "appoDate")
+    @FindBy(name = "appoDate")
     public WebElement dateTextBox;
 
     @FindBy(xpath = "//*[text()='Send an Appointment Request']")
@@ -39,31 +39,21 @@ public class AppointmentPage {
     @FindBy(xpath = "//*[text()='Appointment registration saved!']")
     public WebElement successMessageToastContainer;
 
-    @FindBy (xpath = "//*[contains(text(),'Your FirstName is required.')]")
+    @FindBy(xpath = "//*[contains(text(),'Your FirstName is required.')]")
     public WebElement alertMessageFirstName;
 
-    @FindBy (xpath = "//*[contains(text(),'Your LastName is required.')]")
+    @FindBy(xpath = "//*[contains(text(),'Your LastName is required.')]")
     public WebElement alertMessageLastName;
 
-    @FindBy (xpath = "(//*[@class='invalid-feedback'])[3]")
-    public WebElement ssnRequiredFeedback;
 
-    @FindBy (xpath = "//*[contains(text(),'Your SSN is required.')]")
-    public WebElement alertMessageSSN;
-
-    @FindBy (xpath = "//*[contains(text(),'Your SSN is invalid')]")
+    @FindBy(xpath = "//*[contains(text(),'Your SSN is invalid')]")
     public WebElement alertMessageSSNInvalid;
 
-    @FindBy (xpath = "//*[contains(text(),'Your email is required.')]")
-    public WebElement alertMessageEmail;
 
-    @FindBy (xpath = "//*[contains(text(),'This field is invalid')]")
+    @FindBy(xpath = "//*[contains(text(),'This field is invalid')]")
     public WebElement alertMessageEmailInvalid;
 
-    @FindBy (xpath = "//*[contains(text(),'Phone number is required.')]")
-    public WebElement alertMessagePhoneNumber;
-
-    @FindBy (xpath = "//*[contains(text(),'Phone number is invalid')]")
+    @FindBy(xpath = "//*[contains(text(),'Phone number is invalid')]")
     public WebElement alertMessagePhoneNumberInvalid;
 
     @FindBy (xpath = "//*[@aria-haspopup='true']")
@@ -89,4 +79,9 @@ public class AppointmentPage {
 
     @FindBy (css = "#appointment-heading")
     public WebElement appointmentHeading;
+
+
+
 }
+
+
