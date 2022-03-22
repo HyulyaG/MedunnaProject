@@ -9,6 +9,11 @@ public class NavigationPageAfterLogin {
     public NavigationPageAfterLogin() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
+    @FindBy(id = "admin-menu")
+    public WebElement administrationDropdown;
+    @FindBy(xpath = "//*[.='User management']")
+    public WebElement userManagementButton;
     @FindBy(id="entity-menu")
     public WebElement ItemAndTitlesDropDown;
     @FindBy(xpath="(//a[@class='dropdown-item'])[1]")
