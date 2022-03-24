@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         },
         features = "./src/test/resources/features",
         glue = {"stepdefinitions","Hooks"},
-        tags = "@Smoketest",
+        tags = "ApiPostTestItem",
         dryRun = false
 )
 public class Runner {
