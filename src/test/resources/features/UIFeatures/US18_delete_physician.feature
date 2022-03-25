@@ -1,3 +1,4 @@
+@Smoketest
 Feature: admin can delete physician
 
   @delete_physician

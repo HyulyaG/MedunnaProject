@@ -3,7 +3,7 @@
 #3. email id cannot be created without "@" sign and ".com" extension
 #4. email cannot be left blank
 #5. email should be validated with API and DB
-@Smoke_test
+@Smoketest
 @UIRegistration
 @user_registration
 Feature: registration feature

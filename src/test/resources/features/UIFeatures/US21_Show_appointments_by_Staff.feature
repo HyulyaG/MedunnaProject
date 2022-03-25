@@ -1,3 +1,4 @@
+@Smoketest
 @staff_edit_appointment
 Feature: Staff can edit patient appointment
 

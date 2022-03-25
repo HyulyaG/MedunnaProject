@@ -1,3 +1,4 @@
+@Smoketest
 Feature: Admin test items functionality
 
   @CreateTestItem @AdminUI

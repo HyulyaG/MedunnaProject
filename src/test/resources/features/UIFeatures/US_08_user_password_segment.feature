@@ -1,3 +1,4 @@
+@Smoketest
 @US_08_user_password_segment
 Feature: employee login password update
 

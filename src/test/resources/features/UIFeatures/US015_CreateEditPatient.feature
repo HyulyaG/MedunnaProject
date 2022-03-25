@@ -1,3 +1,4 @@
+@Smoketest
 Feature: Create or Edit Patient
 
   @US015_CreateEditPatient

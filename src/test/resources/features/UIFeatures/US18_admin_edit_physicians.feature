@@ -8,7 +8,7 @@
 #Admin can edit existing Physicians' info using new data
 #Admin can delete existing Physicians
 
-
+@Smoketest
 @edit_physicians
 Feature: Admin can search an existing registered person by SSN id
 

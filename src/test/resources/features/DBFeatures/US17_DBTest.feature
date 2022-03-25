@@ -1,3 +1,4 @@
+@Smoketest
 @US17_DBTest
 Feature: DB Test Items validation
 

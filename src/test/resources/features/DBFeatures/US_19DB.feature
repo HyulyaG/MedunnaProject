@@ -1,3 +1,4 @@
+@Smoketest
 @US_19_UI_API_DB
 Feature: Staff features
 

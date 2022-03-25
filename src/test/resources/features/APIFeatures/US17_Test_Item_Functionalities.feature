@@ -1,3 +1,4 @@
+@Smoketest
 Feature: Test Item Api functionalities
 
   @TestItemApi
