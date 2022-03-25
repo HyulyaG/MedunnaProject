@@ -46,7 +46,7 @@ public class US17_ApiStepDefs {
     }
     @Given("user send Post request for test item and gets response")
     public void user_send_post_request_for_test_item_and_gets_response() {
-        response=postRequestTestItem(generateToken(), ConfigurationReader.getProperty("testItem_endpoint"),cTestItem);
+        response=postRequestTestItem(generateToken(ConfigurationReader.getProperty("admin_username"), ConfigurationReader.getProperty("admin_password")), ConfigurationReader.getProperty("testItem_endpoint"),cTestItem);
         response.prettyPrint();
     }
     @Given("user saves the test item records")
@@ -73,7 +73,7 @@ public class US17_ApiStepDefs {
 
     @Given("user sends the get request for test items data")
     public void user_sends_the_get_request_for_test_items_data() {
-        response=getRequest(generateToken(),ConfigurationReader.getProperty("testItem_endpoint"));
+        response=getRequest(generateToken(ConfigurationReader.getProperty("admin_username"), ConfigurationReader.getProperty("admin_password")),ConfigurationReader.getProperty("testItem_endpoint"));
         //response.prettyPrint();
     }
 

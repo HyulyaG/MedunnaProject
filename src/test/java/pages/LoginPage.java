@@ -42,4 +42,3 @@ public class LoginPage {
         registerButton.click();
     }
 }
-

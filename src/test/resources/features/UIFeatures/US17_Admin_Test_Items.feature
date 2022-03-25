@@ -28,7 +28,7 @@ Feature: Admin test items functionality
     And user clicks the view button of an item
     Then user verifies that item info is displayed
 
-  @DeleteTestItem @AdminUI
+  @DeleteTestItem #@AdminUI
   Scenario: user can delete test items
     Given user sign-in as admin
     And user selects test item from items-titles dropdown

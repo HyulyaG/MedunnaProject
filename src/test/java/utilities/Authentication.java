@@ -1,5 +1,4 @@
 package utilities;
-import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -8,7 +7,7 @@ import java.util.Map;
 import static Hooks.Hooks.spec;
 import static io.restassured.RestAssured.given;
 public class Authentication {
-    public static String generateToken(){
+    public static String generateToken(String admin_username, String admin_password){
         //Set the base url
         //api/authenticate
         spec.pathParams("first", "api", "second", "authenticate");
