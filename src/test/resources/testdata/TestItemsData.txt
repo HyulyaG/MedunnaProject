@@ -1,0 +1,5 @@
+Tamar test,mg/dL,95,50,120,null
+Lincoln test,mg/dL,57,50,120,null
+Louetta test,mg/dL,51,42,92,25-03-2022
+Agustin test,mg/dL,90,42,176,25-03-2022
+Pearlene test,mg/dL,119,63,162,25-03-2022

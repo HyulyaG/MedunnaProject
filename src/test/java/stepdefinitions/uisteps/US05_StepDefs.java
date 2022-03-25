@@ -13,7 +13,7 @@ import pojos.Appointment;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 import static utilities.WriteToTxt.saveAppointData;
-import static utilities.WriteToTxt.saveNegativeData;
+import static utilities.WriteToTxt.*;
 
 public class US05_StepDefs {
     AppointmentPage appointmentPage = new AppointmentPage();
@@ -151,5 +151,8 @@ public class US05_StepDefs {
         Driver.wait(2);
         saveNegativeData(appointment);
         Driver.closeDriver();
+    }
+
+    private void saveNegativeData(Appointment appointment) {
     }
 }
