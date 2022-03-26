@@ -15,6 +15,8 @@ Feature: Doctor may request a test
     Then user verifies being on Create or Edit an Appointment page page
     And user clicks on request a test button
     Then user verifies being on Test Items page
+    Then close the application
+
 
   @selection_test
   Scenario: TC02 user makes selections
@@ -28,3 +30,4 @@ Feature: Doctor may request a test
     And user selects the  Glucose, Urea, Creatinine, Sodium, Potassium, Total protein, Albumin, Hemoglobin options
     And user clicks in save button
     Then user verifies the success message
+    Then close the application

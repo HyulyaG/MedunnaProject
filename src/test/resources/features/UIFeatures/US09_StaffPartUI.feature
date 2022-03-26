@@ -11,6 +11,8 @@ Feature: Staff login
     And user clicks on the search patient button from teh dropdown to view all patients data
     When user clicks on the view button for second patient on the list
     Then user verifies patient information for the second patient on the list
+    Then close the application
+
 
     Examples:
       |username|password|
@@ -23,6 +25,7 @@ Feature: Staff login
     And user saves the updated details
     When user click on the back button
     Then user verifies being on the all patients page
+    Then close the application
 
   @US09_TC009_StaffSearchPatient
   Scenario: TC009_Staff_Searches_Patient

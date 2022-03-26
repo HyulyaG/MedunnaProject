@@ -65,12 +65,12 @@ public class US08_UserPasswordStepDefs {
         Thread.sleep(6000);
     }
 
-    @And("user clicks account_menu")
+    /*@And("user clicks account_menu")
     public void userClicksAccount_menu() throws InterruptedException {
 
         Driver.waitAndClick(userPassword.accountMenu);
         Thread.sleep(2000);
-    }
+    }*/
 
     @And("user add character {string} to new password part")
     public void userAddCharacterToNewPasswordPart(String newpass) {

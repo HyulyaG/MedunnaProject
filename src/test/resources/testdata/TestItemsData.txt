@@ -1,0 +1,11 @@
+Tamar test,mg/dL,95,50,120,null
+Lincoln test,mg/dL,57,50,120,null
+Louetta test,mg/dL,51,42,92,25-03-2022
+Agustin test,mg/dL,90,42,176,25-03-2022
+Pearlene test,mg/dL,119,63,162,25-03-2022
+Loreta test,mg/dL,87,50,120,null
+Sean test,mg/dL,66,54,113,25-03-2022
+Nikita test,mg/dL,88,50,120,null
+Lance test,mg/dL,41,53,134,26-03-2022
+Pamelia test,mg/dL,58,50,120,null
+Karina test,mg/dL,78,51,176,26-03-2022

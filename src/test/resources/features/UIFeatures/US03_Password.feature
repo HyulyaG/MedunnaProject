@@ -5,6 +5,8 @@ Feature: Test registration password strength
     Given user is on registration page
     And user provides the password "<password>"
     Then user validates the password strength "<strength>"
+    Then close the application
+
     Examples: test data
       |password|strength|
       |asdfgkdjs |1     |

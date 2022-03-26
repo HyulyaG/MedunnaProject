@@ -11,6 +11,8 @@ Feature: Admin login
     And user clicks on the patient button from teh dropdown to view all patients data
     When user clicks on the view button
     Then user verifies patient information
+    Then close the application
+
     Examples: username and pass
       |username|password|
       |MyAdminHyu|MyAdminHyu1990|
@@ -22,6 +24,8 @@ Feature: Admin login
     And user saves the updated details
     When user click on the back button
     Then user verifies being on the all patients page
+    Then close the application
+
   @US09_TC010_AdminDelete
   Scenario: TC010_Admin_Deletes
 #      Continue from the above TC

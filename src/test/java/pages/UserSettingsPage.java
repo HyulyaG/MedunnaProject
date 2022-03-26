@@ -32,6 +32,15 @@ public class UserSettingsPage {
     @FindBy(xpath = "//span[text()='Save']")
     public WebElement settingsSaveButton;
 
+    @FindBy(xpath = "(//*[.='Delete'])[1]")
+    public WebElement deleteButtonUsersPage;
+
+    @FindBy(xpath = "//*[text()='Cancel']//following::button")
+    public WebElement confirmDeleteButton;
+
+    @FindBy(xpath = "(//a[@class='page-link'])[9]")
+    public WebElement goToLastPage;
+
     @FindBy(xpath = "//*[text()='Settings saved!']")
     public WebElement settingsSaveAlert;
 

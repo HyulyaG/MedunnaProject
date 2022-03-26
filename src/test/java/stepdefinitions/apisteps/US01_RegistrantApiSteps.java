@@ -5,17 +5,10 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
-import io.restassured.mapper.ObjectMapperDeserializationContext;
-import io.restassured.mapper.ObjectMapperSerializationContext;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import pojos.Registrant;
 import utilities.ConfigurationReader;
-import utilities.Driver;
-
-import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
@@ -91,7 +84,7 @@ public class US01_RegistrantApiSteps {
 //
 //      response.prettyPrint();
 
-        response = getRequest(generateToken(),ConfigurationReader.getProperty("registrant_endpoint"));
+        response = getRequest(generateToken(ConfigurationReader.getProperty("admin_username"), ConfigurationReader.getProperty("admin_password")),ConfigurationReader.getProperty("registrant_endpoint"));
         response.prettyPrint();
     }
     @Given("user deserialized data to Java")
