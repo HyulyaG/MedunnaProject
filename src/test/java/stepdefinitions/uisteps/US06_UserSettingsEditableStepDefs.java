@@ -11,19 +11,19 @@ public class US06_UserSettingsEditableStepDefs {
 
     @Given("user sends new firstname as {string}")
     public void user_sends_new_firstname_as(String string) throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         userSettings.settingsFirstName.clear();
         userSettings.settingsFirstName.sendKeys(string);
     }
 
     @Then("clicks on the save button")
     public void clicks_on_the_save_button() throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         userSettings.settingsSaveButton.click();
     }
     @Then("verify the result")
     public void verify_the_result() throws InterruptedException {
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         userSettings.settingsForUserText.isDisplayed();
     }
 
