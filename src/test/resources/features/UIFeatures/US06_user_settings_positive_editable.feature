@@ -11,6 +11,8 @@ Feature: user_settings_editable positive feature
     Then user clicks on the account menu
     Then clicks on the settings button
     Then verify the settings page
+    Then close the application
+
 
     Examples: credentials
       | username      | password |
@@ -21,13 +23,16 @@ Feature: user_settings_editable positive feature
     Given user sends new firstname as "Rocky"
     Then clicks on the save button
     Then verify the result
+    Then close the application
 
   Scenario: last name should be editable
     Given user sends new lastname as "Balboa"
     Then  clicks on the save button
     Then verify the result
+    Then close the application
 
   Scenario: email should be editable
     Given user sends new email as "rockybalboaa@gmail.com"
     Then clicks on the save button
     Then verify the result
+    Then close the application

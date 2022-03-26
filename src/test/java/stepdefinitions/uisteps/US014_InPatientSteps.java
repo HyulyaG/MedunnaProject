@@ -24,37 +24,26 @@ public class US014_InPatientSteps {
     @And("Doctor changes the start and end days to see InPatient information")
     public void doctorChangesTheStartAndEndDaysToSeeInPatientInformation() throws InterruptedException {
 
-
+        Driver.waitAndSendText(inPatientPage.inPatientFromDate,"05.03.2022");
         Thread.sleep(4000);
-        inPatientPage.inPatientFromDate.clear();
-        Driver.clickWithJS(inPatientPage.inPatientFromDate);
-        Thread.sleep(4000);
-        Driver.waitAndSendText(inPatientPage.inPatientFromDate,"01Mar");
-        inPatientPage.inPatientFromDate.sendKeys(Keys.ARROW_RIGHT);
-        Driver.waitAndSendText(inPatientPage.inPatientFromDate,"002022");
-        Thread.sleep(4000);
-
-        inPatientPage.inPatientToDate.clear();
         Driver.clickWithJS(inPatientPage.inPatientToDate);
-        Thread.sleep(4000);
-        Driver.waitAndSendText(inPatientPage.inPatientToDate,"15Mar");
+
+        Driver.waitAndSendText(inPatientPage.inPatientToDate,"10Mar");
         inPatientPage.inPatientToDate.sendKeys(Keys.ARROW_RIGHT);
         Driver.waitAndSendText(inPatientPage.inPatientToDate,"002022");
-        Thread.sleep(4000);
-
-
-
+        Thread.sleep(2000);
     }
 
     @And("Doctor clicks on Edit button for InPatients")
     public void doctorClicksOnEditButtonForInPatients() {
+
         Driver.waitAndClick(inPatientPage.inPatientEditButton,3);
     }
 
     @Then("Doctor should see and verify all InPatient information")
     public void doctor_should_see_and_verify_all_in_patient_information() {
-        Driver.wait(3);
 
+        Driver.wait(3);
         Assert.assertTrue(Driver.waitForVisibility(inPatientPage.inPatientID,3).isDisplayed());
         Assert.assertTrue(Driver.waitForVisibility(inPatientPage.inPatientStartDate,3).isDisplayed());
         Assert.assertTrue(Driver.waitForVisibility(inPatientPage.inPatientEndDate,3).isDisplayed());
@@ -66,7 +55,6 @@ public class US014_InPatientSteps {
         Assert.assertTrue(Driver.waitForVisibility(inPatientPage.inPatientPatientName,3).isDisplayed());
     }
 
-
     @Then("Doctor can update all InPatient information")
     public void doctorCanUpdateAllInPatientInformation() throws InterruptedException {
         Driver.waitAndClick(inPatientPage.editPatientStartDate);
@@ -75,22 +63,14 @@ public class US014_InPatientSteps {
         inPatientPage.editPatientStartDate.sendKeys(Keys.ARROW_RIGHT);
         Driver.waitAndSendText(inPatientPage.editPatientStartDate,"0020221030PM");
         Thread.sleep(1000);
-
         Driver.waitAndClick(inPatientPage.editInPatientEndDate);
         Thread.sleep(1000);
         Driver.waitAndSendText(inPatientPage.editInPatientEndDate,"26Jun");
         inPatientPage.editInPatientEndDate.sendKeys(Keys.TAB);
         Driver.waitAndSendText(inPatientPage.editInPatientEndDate,"0020221115PM");
         Thread.sleep(1000);
-
         Driver.waitAndSendText(inPatientPage.editInPatientDescription,"paracetamol",3);
         Thread.sleep(2000);
-//        inPatientPage.editInPatientDescription.sendKeys(Keys.ARROW_DOWN);
-//        Thread.sleep(2000);
-//        inPatientPage.inPatientCreatedDate.sendKeys(Keys.ARROW_DOWN);
-//        Thread.sleep(2000);
-
-
         Driver.clickWithJS(inPatientPage.editInPatientCreatedDate);
         Driver.waitAndSendText(inPatientPage.editInPatientCreatedDate,"25Feb",1);
         inPatientPage.editInPatientCreatedDate.sendKeys(Keys.TAB);
@@ -101,23 +81,18 @@ public class US014_InPatientSteps {
 
     @Then("Doctor can especially update status of InPatient")
     public void doctorCanEspeciallyUpdateStatusOfInPatient() {
-
-
         Driver.waitAndClick(inPatientPage.editInPatientStatus);
         Driver.selectAnItemFromDropdown(inPatientPage.editInPatientStatus,"UNAPPROVED");
         Driver.clickWithJS(inPatientPage.inPatientSaveButton);
-        Assert.assertTrue(Driver.waitForVisibility(inPatientPage.toastContainerErrorMessage,2).isDisplayed());
 
         Driver.waitAndClick(inPatientPage.editInPatientStatus);
         Driver.selectAnItemFromDropdown(inPatientPage.editInPatientStatus,"STAYING");
         Driver.clickWithJS(inPatientPage.inPatientSaveButton);
-        Assert.assertTrue(Driver.waitForVisibility(inPatientPage.toastContainerErrorMessage,2).isDisplayed());
 
         Driver.waitAndClick(inPatientPage.editInPatientStatus);
         Driver.selectAnItemFromDropdown(inPatientPage.editInPatientStatus,"CANCELLED");
         Driver.clickWithJS(inPatientPage.inPatientSaveButton);
         Assert.assertTrue(Driver.waitForVisibility(inPatientPage.toastContainerErrorMessage,2).isDisplayed());
-
     }
 
     @Then("Doctor closes the driver")
@@ -125,8 +100,5 @@ public class US014_InPatientSteps {
 
         Driver.closeDriver();
     }
-
-
-
 
 }

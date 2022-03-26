@@ -13,6 +13,8 @@ Feature: employee login password update
     And verify the login is successful
     And user clicks on account menu on the account page
     Then user clicks on Password button
+    Then close the application
+
 
 
   @US08_TC_0001_for_stronger_password_one_LOWERCASE
@@ -21,6 +23,8 @@ Feature: employee login password update
     And user verifies the password strength bar is one
     And user add character " <add character>" to new password part
     And user verifies the password strength bar is two
+    Then close the application
+
 
 
     Examples:
@@ -34,6 +38,8 @@ Feature: employee login password update
     And user verifies the password strength bar is two
     And user add character " <add character>" to new password part
     And user verifies the password strength bar is four
+    Then close the application
+
 
 
     Examples:
@@ -47,6 +53,7 @@ Feature: employee login password update
     And user verifies the password strength bar is four
     And user add character " <add character>" to new password part
     And user verifies the password strength bar is five
+
 
     Examples:
       | new password | add character |

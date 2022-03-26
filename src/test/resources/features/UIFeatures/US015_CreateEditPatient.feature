@@ -21,6 +21,8 @@ Feature: Create or Edit Patient
 #    And user validate patient info with DB
 #    And user validate patient info with API
 #    And admin can delete any patient
+    Then close the application
+
 
     Examples:
       | userName   | password | firstName | lastName  | phone       | email               | userId |

@@ -1,4 +1,4 @@
-/*package stepdefinitions.uisteps;
+package stepdefinitions.uisteps;
 
 
 import io.cucumber.java.en.And;
@@ -154,4 +154,3 @@ public class US16_CreateOrEditRoomStepDefs {
 
 
 }
-*/

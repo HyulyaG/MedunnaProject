@@ -11,3 +11,4 @@ Feature: admin can delete physician
     And user clicks on the delete button
     And user confirms delete operation
     Then verify physician is deleted message
+    Then close the application

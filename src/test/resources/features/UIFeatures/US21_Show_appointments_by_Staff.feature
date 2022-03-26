@@ -19,6 +19,8 @@ Feature: Staff can edit patient appointment
     And user makes necessary updates and sets the status "<status>"
     And user click save button
     Then user clicks sign out button
+    Then close the application
+
 
 
     Examples: Appointment data
@@ -44,6 +46,8 @@ Feature: Staff can edit patient appointment
     And user clicks edit button at the first appointment
     Then user verifies create and edit appointments page
     Then user verifies that completed option is disabled
+    Then close the application
+
 
     Examples: Appointment data
 
@@ -65,6 +69,8 @@ Feature: Staff can edit patient appointment
     And user clicks show tests for the given patient
     And user clicks view tests
     Then user verifies that test results are visible
+    Then close the application
+
 
     Examples: Appointment data
 

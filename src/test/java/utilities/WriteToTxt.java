@@ -1,6 +1,7 @@
 package utilities;
 
 import pojos.Appointment;
+import pojos.AppointmentApi;
 import pojos.CTestItem;
 import pojos.Registrant;
 
@@ -178,6 +179,30 @@ public class WriteToTxt {
             writer.append(testItem+"\n");
             writer.close();
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+    public static void save_Ids(List<Object> Ids){
+        try{
+            //src/resources/testdata/Registrantdata.txt
+            FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("database_id_data"), false);
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+            for(Object eachSSN: Ids) {
+                writer.append(eachSSN + ",\n");
+            }
+            writer.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    public static void saveAppointmentCreation(AppointmentApi appointmentApi){
+        try{
+            FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("appointment_post_records"), true);
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+            writer.append(appointmentApi+"\n");
+            writer.close();
+        }catch (Exception e){
             e.printStackTrace();
         }
     }

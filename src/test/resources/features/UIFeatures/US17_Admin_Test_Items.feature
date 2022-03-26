@@ -21,6 +21,8 @@ Feature: Admin test items functionality
     And user saves the test item records created with ui
     And user clicks save button
     Then user verifies that created message is displayed
+    Then close the application
+
 
   @ViewTestItem @AdminUI
   Scenario: user can view test items
@@ -28,6 +30,8 @@ Feature: Admin test items functionality
     And user selects test item from items-titles dropdown
     And user clicks the view button of an item
     Then user verifies that item info is displayed
+    Then close the application
+
 
   @DeleteTestItem #@AdminUI
   Scenario: user can delete test items
@@ -35,6 +39,8 @@ Feature: Admin test items functionality
     And user selects test item from items-titles dropdown
     And user clicks the delete button of an item
     Then user verifies that deleted message is displayed
+    Then close the application
+
 
 
 

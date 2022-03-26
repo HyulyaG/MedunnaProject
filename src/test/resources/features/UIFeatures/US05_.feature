@@ -15,6 +15,8 @@ Feature: New customers (patients) should make appoinment to processed in hospita
     Then There should be Success message.
     And sign in the app with the provided "<username>" and "<password>"
     Then verify the appointment
+    Then close the application
+
     Examples: Test Data
       | firstName | lastName | SSN         | email             | phoneNumber  | date       | username   | password   |
       | Hasan     | Komur    | 523-89-8315 | hasan@kara.com    | 333-444-5555 | 21-06-2034 | hasankomur | 1211402301 |
@@ -33,6 +35,8 @@ Feature: New customers (patients) should make appoinment to processed in hospita
     And user provides invalid phone number as "<phoneNumber>"
     Then user verifies fail message of phone number
     Then user data will be created
+    Then close the application
+
     Examples: Test Data
       | firstName | lastName | SSN             | email         | phoneNumber   |
       |           |          | 12-31*-023-2311 | Ferhat@asdcom | 211412        |

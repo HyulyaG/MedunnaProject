@@ -9,6 +9,8 @@ Feature:admin should be login
     And user sends password "<password>"
     And user clicks on the login button
     Then verify the my page
+    Then close the application
+
 
     Examples: Credential
       | username     | password |
