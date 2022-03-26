@@ -1,0 +1,2 @@
+AppointmentCreationAPI{, firstName='Lashawna', lastName='Mosciski', ssn='449-38-4853', email='marin.johnson@gmail.com', phone='123-444-4545', startDate='2022-11-12'}
+AppointmentCreationAPI{, firstName='Marg', lastName='Greenfelder', ssn='125-61-4253', email='oscar.ferry@gmail.com', phone='123-444-4545', startDate='2022-11-12'}
